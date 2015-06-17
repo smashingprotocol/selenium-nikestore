@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="DMNLMPalo1" name="com.pcm.tests.HomepageAlive" skipped="0" tests="1" time="34.873" timestamp="2015-06-17T05:26:32">
+  <properties>
+    <property name="PDP_INPUT_EDPNO_XPATH" value="//input[@id=&apos;selectedEdp&apos;]" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="env.PROMPT" value="$P$G" />
+    <property name="CHECKOUT_SELECT_CCMONTHSELECT_XPATH" value="//select[@name=&apos;paymentExpirationMonth&apos;]" />
+    <property name="env.VS120COMNTOOLS" value="C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\" />
+    <property name="java.home" value="C:\Program Files\Java\jre1.8.0_31" />
+    <property name="CHECKOUT_ORDERCONFIRMATION_GTS_XPATH" value="//div[@id=&apos;gts-order&apos;]" />
+    <property name="CHECKOUT_USER_APO_EMAIL_prod" value="manilaqa+prodpcmapo34038@gmail.com" />
+    <property name="CHECKOUT_INPUT_SHIPCO_XPATH" value="//input[@id=&apos;shippingCompany&apos;]" />
+    <property name="CART_BTN_MOVEALLITEMS_XPATH" value="//a[@class=&apos;move-all-to-cart&apos;]" />
+    <property name="CART_BTN_SAVEDITEMCLEARALL_XPATH" value="//a[@class=&apos;clear-all&apos;]" />
+    <property name="CHECKOUT_ZIP_NONTAX" value="99901-6136" />
+    <property name="CHECKOUT_LABEL_NOTAX_XPATH" value="//p[@id=&apos;orderReviewTaxTotal&apos; and text()=&apos;$ 0.00&apos;]" />
+    <property name="CHECKOUT_LINK_UPDATEQTY_XPATH" value="//a[@id=&apos;continueShopping&apos;]" />
+    <property name="CHECKOUT_QTY_ORDERWEIGHTLIMIT" value="50" />
+    <property name="CHECKOUT_CHECKBOX_SAMEASBILL_XPATH" value="//input[@id=&apos;sameAsBilling&apos;]" />
+    <property name="CHECKOUT_ADDBOOK_BTN_SHIPTOADD_XPATH" value="//a[@class=&apos;buttonShipToAddress&apos;]" />
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jre1.8.0_31\lib\endorsed" />
+    <property name="SEARCH_SKU_INSTANTREBATES_EDP" value="8459515" />
+    <property name="env.USERNAME" value="MPalo" />
+    <property name="debuglevel" value="source,lines,vars" />
+    <property name="SEARCH_KEYWORD_DFLT" value="lenovo" />
+    <property name="CHECKOUT_USER_APO_EMAIL_stage" value="manilaqa+stagepcmapo34038@gmail.com" />
+    <property name="HEADER_LINK_SIGNOUT_XPATH" value="//a[@href=&apos;/o/msc-login?op=mall.web.common.signInLink.signInLink&amp;reqOp=logOut&apos;]" />
+    <property name="ECLIPSE_HOME" value="../../eclipse-jee-luna-R-win32-x86_64/eclipse/" />
+    <property name="SEARCH_BTN_MODAL_PRCDCART_XPATH" value="//div[@class=&apos;modalbx_normal&apos;]//a[@class=&apos;mid cart ga&apos; and @title=&apos;Proceed to Cart&apos;]" />
+    <property name="sun.os.patch.level" value="Service Pack 1" />
+    <property name="CART_LABEL_WHATFINALPRICE_XPATH" value="//p[@class=&apos;itemRebate&apos; and contains(text(),&apos;Final Price at Checkout&apos;)]" />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="env.COMPUTERNAME" value="DMNLMPALO1" />
+    <property name="env.ProgramFiles(x86)" value="C:\Program Files (x86)" />
+    <property name="SEARCH_INPUT_XPATH" value="id(&apos;search-menu-9&apos;)//input" />
+    <property name="java.version" value="1.8.0_31" />
+    <property name="eclipse.pdebuild.home" value="/C:/eclipse-jee-luna-R-win32-x86_64/eclipse/plugins/org.eclipse.pde.build_3.9.0.v20140415-2029/./" />
+    <property name="CHECKOUT_INPUT_SECCODE_XPATH" value="//input[@id=&apos;enterSecurityCode&apos;]" />
+    <property name="CART_LINK_XPATH" value="//a[@href=&apos;/n/Shopping-Cart/msc-cart&apos;]" />
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+    <property name="env.USERPROFILE" value="C:\Users\mpalo" />
+    <property name="ant.project.invoked-targets" value="HomepageAlive" />
+    <property name="env.SystemRoot" value="C:\Windows" />
+    <property name="CART_BTN_BUYNOWWITHOUTENRAVE_XPATH" value="//img[@id=&apos;addIpodWithoutEngraving&apos;]" />
+    <property name="CART_BTN_QUICKADD_XPATH" value="//a[@id=&apos;btnCartSkuAdd&apos;]" />
+    <property name="CART_SELECT_SHIPMTD_XPATH" value="//select[@name=&apos;shippingMethod&apos;]" />
+    <property name="user.name" value="MPalo" />
+    <property name="CHECKOUT_INPUT_SHIPLASTNAME_XPATH" value="//input[@id=&apos;shippingLname&apos;]" />
+    <property name="HEADER_LINK_SIGNIN_XPATH" value="//a[@id=&apos;signin-btn-21&apos;]" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="CHECKOUT_LABEL_SUBTOTAL_NONEG_XPATH" value="//p[@id=&apos;orderReviewSubTotal&apos; and not(contains(text(),&apos;-&apos;))]" />
+    <property name="sun.jnu.encoding" value="Cp1252" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="LOGIN_INPUT_EMAIL_XPATH" value="//input[@id=&apos;emailAddress&apos;]" />
+    <property name="env.LOCALAPPDATA" value="C:\Users\mpalo\AppData\Local" />
+    <property name="CHECKOUT_SELECT_CCYEARSELECT_XPATH" value="//select[@name=&apos;paymentExpirationYear&apos;]" />
+    <property name="LOGIN_INPUT_PSWD_XPATH" value="//input[@id=&apos;password&apos;]" />
+    <property name="CHECKOUT_LINK_GUESTCHECKOUT_XPATH" value="//a[@href=&apos;/o/unifiedWidget-1?guest=true&apos;]" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="CHECKOUT_USER_TAX_EMAIL_prod" value="manilaqa+prodpcm1@gmail.com" />
+    <property name="user.timezone" value="Asia/Singapore" />
+    <property name="user.script" value="" />
+    <property name="path.separator" value=";" />
+    <property name="env.PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 23 Stepping 10, GenuineIntel" />
+    <property name="CHECKOUT_ZIP_APO" value="34038" />
+    <property name="file.encoding" value="Cp1252" />
+    <property name="SEARCH_SKU_WITHSP" value="902912" />
+    <property name="ant.project.default-target" value="defaultTest" />
+    <property name="CHECKOUT_LABEL_TAX_XPATH" value="//p[@id=&apos;orderReviewTaxTotal&apos; and text()!=&apos;$ 0.00&apos;]" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.pcm.tests.HomepageAlive filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\wt\nikeStore\junit\TEST-com.pcm.tests.HomepageAlive.xml crashfile=C:\wt\nikeStore\tests\junitvmwatcher2862559188581738042.properties propsfile=C:\wt\nikeStore\tests\junit371333668248377536.properties" />
+    <property name="CHECKOUT_LINK_EDITCART_XPATH" value="//a[@id=&apos;editYourCart&apos;]" />
+    <property name="CART_SELECTOPTION_FREESHIPMTD_XPATH" value="//select[@name=&apos;shippingMethod&apos;]//option[contains(text(),&apos;FREE&apos;)]" />
+    <property name="env.NUMBER_OF_PROCESSORS" value="2" />
+    <property name="env.APPDATA" value="C:\Users\mpalo\AppData\Roaming" />
+    <property name="SEARCH_LINK_PDP_XPATH" value="//a[@data-action=&apos;Link:Product Detail Page&apos;]" />
+    <property name="CART_COUPONCODE" value="MWBTEST43275" />
+    <property name="ant.file" value="C:\wt\nikeStore\tests\allTests.xml" />
+    <property name="SEARCH_SKU_FREESHIP" value="9235237" />
+    <property name="CART_BTN_NEXTSERVICEPLAN_XPATH" value="//a[@href=&apos;javascript:submitServicePlansSelection();&apos;]" />
+    <property name="CHECKOUT_INPUT_BILLCO_XPATH" value="//input[@id=&apos;billingCompany&apos;]" />
+    <property name="SEARCH_SKU_IPAD" value="13312858" />
+    <property name="CHECKOUT_LABEL_HEADERCONTACTNO_XPATH_pcm" value="//div[@class=&apos;contactNum&apos; and text()=&apos;1-800-700-1000&apos;]" />
+    <property name="tests.dir" value="\Users\mpalo/tests" />
+    <property name="CART_LABEL_FREESHIPPINGICON_XPATH" value="//span[@class=&apos;fshiptip ga&apos; and text()=&apos;?&apos;]" />
+    <property name="SEARCH_SKU_YOUSAVE" value="500347" />
+    <property name="CHECKOUT_LABEL_ORSHIPFEE_XPATH" value="//p[@id=&apos;orderReviewShippingTotal&apos;]" />
+    <property name="CHECKOUT_DEVICEFINGERPRINT_XPATH_stage" value="id(&apos;deviceFingerprintForm&apos;)//p[contains(@style,&apos;1snn5n9w&apos;)]" />
+    <property name="CHECKOUT_ORDERCONFIRMATION_CJTRACKING_XPATH" value="//img[contains(@src,&apos;www.emjcd.com&apos;)]" />
+    <property name="java.io.tmpdir" value="C:\Users\mpalo\AppData\Local\Temp\" />
+    <property name="user.language" value="en" />
+    <property name="env.SystemDrive" value="C:" />
+    <property name="line.separator" value="&#xd;&#xa;" />
+    <property name="target" value="1.5" />
+    <property name="CART_BTN_REMOVEALL_CONFIRM_XPATH" value="//a[@id=&apos;removeAllConfirmed&apos;]" />
+    <property name="CART_INPUT_ZIPCODE_XPATH" value="//input[@id=&apos;zipCode&apos;]" />
+    <property name="CART_BTN_GUEST_XPATH" value="//a[@title=&apos;Guest Checkout&apos;]" />
+    <property name="CHECKOUT_INPUT_CARDNO_XPATH" value="//input[@id=&apos;paymentCardNumber&apos;]" />
+    <property name="EXCEPTION_MSG_TIMEOUT_XPATH" value="//h1[text()=&apos;Request Timeout&apos;]" />
+    <property name="SEARCH_SKU_INSTANTREBATES" value="9846698" />
+    <property name="SEARCH_SKU_DFLT" value="13190397" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="TEST_ENV" value="prod" />
+    <property name="LOGIN_BTN_SIGNIN_XPATH" value="//input[@id=&apos;input-submit&apos;]" />
+    <property name="source" value="1.5" />
+    <property name="sun.desktop" value="windows" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="shipmethod.14" value="FedEx Ground (3-7 days)" />
+    <property name="shipmethod.13" value="U.S. First Class Mail (3-7 days)" />
+    <property name="shipmethod.12" value="FlatScreen TV Ground" />
+    <property name="CHECKOUT_USER_EMAIL_stage" value="manilaqa+stagecalifornia1@gmail.com" />
+    <property name="shipmethod.11" value="U.S. Priority Service Media Mail" />
+    <property name="shipmethod.10" value="APO/FPO Mail (4-6 weeks) " />
+    <property name="CHECKOUT_INVALID_ERRMSG_ORQTY_XPATH" value="//div[@class=&apos;inputTextExtraSmallSizebefore inputTextExtraSmallSizebefore-error&apos;]" />
+    <property name="env.PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" />
+    <property name="CHECKOUT_LINK_QASMODAL_USEBILLADD_XPATH" value="//div[@class=&apos;modBox-btnCon&apos;]//a[@addrtype=&apos;billing&apos; and contains(text(),&apos;I understand, use address anyway&apos;)]" />
+    <property name="CHECKOUT_INVALIDQTY_LIST" value="abc,-1,500" />
+    <property name="WAIT_SEC" value="5000" />
+    <property name="CHECKOUT_BTN_ADDSHIPADD_XPATH" value="//a[@class=&apos;buttonAddShippingAddress pBottom10px&apos;]" />
+    <property name="CHECKOUT_ORDER_ITEMROW_XPATH" value="//div[@class=&apos;cartItemsCon&apos;]" />
+    <property name="CART_INPUT_COUPONCODE_XPATH" value="//input[@id=&apos;couponCode&apos;]" />
+    <property name="CHECKOUT_INPUT_BILLPHONE_XPATH" value="//input[@id=&apos;billingTelephone&apos;]" />
+    <property name="env.LOGONSERVER" value="\\SMNLDC01" />
+    <property name="eclipse.pdebuild.templates" value="/C:/eclipse-jee-luna-R-win32-x86_64/eclipse/plugins/org.eclipse.pde.build_3.9.0.v20140415-2029/templates/" />
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+    <property name="CHECKOUT_INPUT_SHIPMOBILE_XPATH" value="//input[@id=&apos;shippingMobile&apos;]" />
+    <property name="CHECKOUT_RADIO_PLACEORDERTERMS_XPATH" value="//input[@id=&apos;mmTermsConditions&apos;]" />
+    <property name="CHECKOUT_LABEL_SUBTOTAL_NONZERO_XPATH" value="//p[@id=&apos;orderReviewGrandTotal&apos; and text()!=&apos;$ 0.00&apos;]" />
+    <property name="CHECKOUT_USER_HI_EMAIL_prod" value="manilaqa+prodpcmhi96898@gmail.com" />
+    <property name="env.PUBLIC" value="C:\Users\Public" />
+    <property name="CHECKOUT_INPUT_SHIPPHONE_XPATH" value="//input[@id=&apos;shippingTelephone&apos;]" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.9.2 compiled on July 8 2013" />
+    <property name="screenShotDir" value="C:\wt\nikeStore/junit/screenshot//HomepageAlive" />
+    <property name="env.USERDOMAIN" value="MIDDLE_EARTH" />
+    <property name="SEARCH_SKU_OVERWEIGHT" value="79237" />
+    <property name="ant.file.type.pcm" value="file" />
+    <property name="env.PROCESSOR_LEVEL" value="6" />
+    <property name="CHECKOUT_EXPYEAR" value="2017" />
+    <property name="CHECKOUT_BTN_PLACEYOURORDER_XPATH" value="//input[@id=&apos;placeorderbtn&apos;]" />
+    <property name="CHECKOUT_DEVICEFINGERPRINT_XPATH_prod" value="id(&apos;deviceFingerprintForm&apos;)//p[contains(@style,&apos;k8vif92e&apos;)]" />
+    <property name="CHECKOUT_LINK_BACKTOCART_XPATH" value="//a[@href=&apos;/n/Shopping-Cart/msc-cart?op=mall.web.zones.shoppingCartMain.processCart&apos;]" />
+    <property name="CHECKOUT_INPUT_BILLLASTNAME_XPATH" value="//input[@id=&apos;billingLname&apos;]" />
+    <property name="CHECKOUT_USER_SAVEDCC_EMAIL" value="manilaqa+prodpcm0217135@gmail.com" />
+    <property name="env.windir" value="C:\Windows" />
+    <property name="CHECKOUT_LABEL_ORSUBTOTAL_XPATH" value="//p[@id=&apos;orderReviewSubTotal&apos;]" />
+    <property name="env.CommonProgramFiles(x86)" value="C:\Program Files (x86)\Common Files" />
+    <property name="CHECKOUT_USER_PASSWORD" value="123456" />
+    <property name="CHECKOUT_INPUT_BILLFIRSTNAME_XPATH" value="//input[@id=&apos;billingFname&apos;]" />
+    <property name="os.name" value="Windows 7" />
+    <property name="CHECKOUT_INPUT_BILLPSWD_XPATH" value="//input[@id=&apos;billingPassword&apos;]" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="HEADER_BTN_SIGNIN_XPATH" value="(//a[contains(@href,&apos;/o/Login-Selector/msc-login-selector&apos;)]) [position()=1]" />
+    <property name="CART_LABEL_ORDERTOTAL_XPATH" value="//div[@class=&apos;ordersValue total&apos;]" />
+    <property name="env.RanorexPath" value="C:\Program Files (x86)\Ranorex 4.0\" />
+    <property name="env.TMP" value="C:\Users\mpalo\AppData\Local\Temp" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="env.ProgramData" value="C:\ProgramData" />
+    <property name="CART_LABEL_FREESHIPPINGICONTEXT_XPATH" value="//span[contains(text(),&apos;Free Shipping&apos;)]" />
+    <property name="CHECKOUT_EXPMONTH" value="12" />
+    <property name="env.OS" value="Windows_NT" />
+    <property name="java.library.path" value="C:\Program Files\Java\jre1.8.0_31\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\CineForm\Tools;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Java\jdk1.7.0\bin;C:\ant\bin;&quot;C:\WEBTESTHOME\bin&quot;;&quot;C:\bin\phantomjs&quot;;&quot;C:\Program Files (x86)\phantomjs-2.0.0-windows\phantomjs-2.0.0-windows\bin&quot;;." />
+    <property name="CHECKOUT_INPUT_BILLMOBILE_XPATH" value="//input[@id=&apos;billingMobile&apos;]" />
+    <property name="CHECKOUT_LABEL_RECYCFEE_XPATH" value="//p[@id=&apos;orderReviewStateFeeTitle&apos; and @style!=&apos;display: none&apos;]" />
+    <property name="eclipse.pdebuild.scripts" value="/C:/eclipse-jee-luna-R-win32-x86_64/eclipse/plugins/org.eclipse.pde.build_3.9.0.v20140415-2029/scripts/" />
+    <property name="ant.java.version" value="1.8" />
+    <property name="CHECKOUT_INPUT_SHIPFIRSTNAME_XPATH" value="//input[@id=&apos;shippingFname&apos;]" />
+    <property name="basedir" value="C:\wt\nikeStore\tests" />
+    <property name="java.class.version" value="52.0" />
+    <property name="ant.home" value="C:\eclipse-jee-luna-R-win32-x86_64\eclipse\plugins\org.apache.ant_1.9.2.v201404171502" />
+    <property name="TEST_HOST" value="http://www.pcm.com/" />
+    <property name="env.Path" value="C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\CineForm\Tools;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Java\jdk1.7.0\bin;C:\ant\bin;&quot;C:\WEBTESTHOME\bin&quot;;&quot;C:\bin\phantomjs&quot;;&quot;C:\Program Files (x86)\phantomjs-2.0.0-windows\phantomjs-2.0.0-windows\bin&quot;" />
+    <property name="CHECKOUT_ORDERCONFIRMATION_ORNO_XPATH" value="(//div[@class=&apos;orderInfoTblCell&apos;]) [position()=1]" />
+    <property name="env.HOMEDRIVE" value="C:" />
+    <property name="CART_LABEL_FREESHIPPINGTEXT_XPATH" value="//p[@class=&apos;lbf&apos; and text()=&apos;Free Shipping&apos;]" />
+    <property name="CHECKOUT_ZIP_RECYCFEE" value="90245" />
+    <property name="SEARCH_SKU_MAILINREBATES" value="8321064" />
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jre1.8.0_31\bin" />
+    <property name="CART_BTN_NEW_XPATH" value="//a[@title=&apos;New Customer&apos;]" />
+    <property name="env.PROCESSOR_REVISION" value="170a" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="user.variant" value="" />
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+    <property name="CHECKOUT_LINK_CHANGESHIP_XPATH" value="//a[@href=&apos;/o/unifiedWidget-2&apos;]" />
+    <property name="CART_INPUT_EMAIL_XPATH" value="//div[@class=&apos;cartOrdersCon&apos;]//input[@id=&apos;email-address&apos;]" />
+    <property name="FOOTER_LINK_MYACT_LOGIN_XPATH" value="//a[@href=&apos;/o/My-Account-Dashboard/msc-4&apos;]" />
+    <property name="SEARCH_LINK_XPATH" value="//div[@id=&apos;search-menu-9&apos;]/a" />
+    <property name="isProd" value="true" />
+    <property name="CHECKOUT_CCNO_VISA" value="4111111111111111" />
+    <property name="ant.project.name" value="pcm" />
+    <property name="env.asl.log" value="Destination=file" />
+    <property name="java.vm.specification.version" value="1.8" />
+    <property name="CART_BTN_REMOVEALL_XPATH" value="//a[@id=&apos;removeAllCart&apos;]" />
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+    <property name="SEARCH_SKU_GROUNDONLY" value="9731242" />
+    <property name="sun.cpu.isalist" value="amd64" />
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jre1.8.0_31\lib\ext;C:\Windows\Sun\Java\lib\ext" />
+    <property name="os.version" value="6.1" />
+    <property name="CHECKOUT_RADIO_SHIPMTD_XPATH" value="//input[@type=&apos;radio&apos; and @name=&apos;shippingMethod&apos;]" />
+    <property name="user.home" value="C:\Users\mpalo" />
+    <property name="CHECKOUT_INPUT_BILLCONFIRMPSWD_XPATH" value="//input[@id=&apos;billingConfirmPassword&apos;]" />
+    <property name="CHECKOUT_LABEL_FREESHIP_XPATH" value="//div[@class=&apos;shippingMethCon&apos;]//span[text()=&apos;FREE&apos;]" />
+    <property name="CHECKOUT_INPUT_QTY_XPATH" value="//input[contains(@class,&apos;inputTextExtraSmallSize orderQty&apos;)]" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="SEARCH_SKU_PROMOCODE" value="8321162" />
+    <property name="env.CommonProgramW6432" value="C:\Program Files\Common Files" />
+    <property name="CHECKOUT_ZIP_TAX" value="36310-2078" />
+    <property name="env.JAVA_HOME" value="C:\Program Files\Java\jdk1.7.0" />
+    <property name="env.ProgramW6432" value="C:\Program Files" />
+    <property name="env.USERDNSDOMAIN" value="PCMALL.COM" />
+    <property name="junit.output.dir" value="junit" />
+    <property name="user.dir" value="C:\wt\nikeStore" />
+    <property name="ant.file.pcm" value="C:\wt\nikeStore\build.xml" />
+    <property name="env.FP_NO_HOST_CHECK" value="NO" />
+    <property name="maven.repo.dir" value="../../\Users\mpalo/.m2/repository" />
+    <property name="CART_BTN_EXIST_XPATH" value="//div[@class=&apos;cartOrdersCon&apos;]//a[@title=&apos;Existing Customer&apos;]" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="CART_INPUT_QTY_XPATH" value="//input[@class=&apos;cartQty cart-qty&apos;]" />
+    <property name="env.ALLUSERSPROFILE" value="C:\ProgramData" />
+    <property name="SEARCH_INPUT_QTY_XPATH" value="//input[contains(@id,&apos;addCartQty&apos;)]" />
+    <property name="CART_INPUT_PSWD_XPATH" value="//div[@class=&apos;cartOrdersCon&apos;]//input[@id=&apos;password&apos;]" />
+    <property name="CHECKOUT_USER_TAX_EMAIL_stage" value="manilaqa+stagepcm1@gmail.com" />
+    <property name="SEARCH_SKU_FLATSCREEN" value="9895105" />
+    <property name="CHECKOUT_INPUT_BILLADD1_XPATH" value="//input[@id=&apos;billingAddress&apos;]" />
+    <property name="env.PROCESSOR_ARCHITECTURE" value="AMD64" />
+    <property name="SEARCH_SKU_ESDONLY" value="9596239" />
+    <property name="java.vm.version" value="25.31-b07" />
+    <property name="env.HOMEPATH" value="\Users\mpalo" />
+    <property name="java.class.path" value="C:\wt\nikeStore\lib\commons-codec-1.9.jar;C:\wt\nikeStore\lib\commons-collections-3.2.1.jar;C:\wt\nikeStore\lib\commons-io-2.4.jar;C:\wt\nikeStore\lib\commons-lang3-3.3.2.jar;C:\wt\nikeStore\lib\commons-logging-1.1.3.jar;C:\wt\nikeStore\lib\cssparser-0.9.14.jar;C:\wt\nikeStore\lib\htmlunit-2.15.jar;C:\wt\nikeStore\lib\htmlunit-core-js-2.15.jar;C:\wt\nikeStore\lib\httpclient-4.3.3.jar;C:\wt\nikeStore\lib\httpcore-4.3.2.jar;C:\wt\nikeStore\lib\httpmime-4.3.3.jar;C:\wt\nikeStore\lib\javax.mail.jar;C:\wt\nikeStore\lib\jetty-http-8.1.15.v20140411.jar;C:\wt\nikeStore\lib\jetty-io-8.1.15.v20140411.jar;C:\wt\nikeStore\lib\jetty-util-8.1.15.v20140411.jar;C:\wt\nikeStore\lib\jetty-websocket-8.1.15.v20140411.jar;C:\wt\nikeStore\lib\junit-4.10.jar;C:\wt\nikeStore\lib\log4j-1.2.17.jar;C:\wt\nikeStore\lib\nekohtml-1.9.21.jar;C:\wt\nikeStore\lib\poi-3.11-20141221.jar;C:\wt\nikeStore\lib\sac-1.3.jar;C:\wt\nikeStore\lib\selenium-java-2.45.0.jar;C:\wt\nikeStore\lib\selenium-server-standalone-2.45.0.jar;C:\wt\nikeStore\lib\serializer-2.7.1.jar;C:\wt\nikeStore\lib\xalan-2.7.1.jar;C:\wt\nikeStore\lib\xercesImpl-2.11.0.jar;C:\wt\nikeStore\lib\xml-apis-1.4.01.jar;C:\wt\nikeStore\target\classes;C:\wt\nikeStore\target\test-classes;C:\eclipse-jee-luna-R-win32-x86_64\eclipse\plugins\org.apache.ant_1.9.2.v201404171502\lib\ant-launcher.jar;C:\eclipse-jee-luna-R-win32-x86_64\eclipse\plugins\org.apache.ant_1.9.2.v201404171502\lib\ant.jar;C:\eclipse-jee-luna-R-win32-x86_64\eclipse\plugins\org.apache.ant_1.9.2.v201404171502\lib\ant-junit.jar;C:\eclipse-jee-luna-R-win32-x86_64\eclipse\plugins\org.apache.ant_1.9.2.v201404171502\lib\ant-junit4.jar" />
+    <property name="env.UATDATA" value="C:\Windows\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77" />
+    <property name="CHECKOUT_INPUT_BILLADD2_XPATH" value="//input[@id=&apos;billingAddress_2&apos;]" />
+    <property name="ant.library.dir" value="C:\eclipse-jee-luna-R-win32-x86_64\eclipse\plugins\org.apache.ant_1.9.2.v201404171502\lib" />
+    <property name="os.arch" value="amd64" />
+    <property name="env.SESSIONNAME" value="Console" />
+    <property name="CHECKOUT_USER_EMAIL_prod" value="manilaqa+prodcalifornia1@gmail.com" />
+    <property name="CHECKOUT_SCODE_VISA" value="123" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="env.CommonProgramFiles" value="C:\Program Files\Common Files" />
+    <property name="CART_BTN_CHECKOUT_XPATH" value="//a[@href=&apos;/o/unifiedWidget-1?opOrigin=processCheckOut&apos;]" />
+    <property name="env.ProgramFiles" value="C:\Program Files" />
+    <property name="ant.core.lib" value="C:\eclipse-jee-luna-R-win32-x86_64\eclipse\plugins\org.apache.ant_1.9.2.v201404171502\lib\ant.jar" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="CHECKOUT_INPUT_BILLEMAIL_XPATH" value="//input[@id=&apos;billingEmail&apos;]" />
+    <property name="env.LDMS_LOCAL_DIR" value="C:\Program Files (x86)\LANDesk\LDClient\Data" />
+    <property name="SHIP_MTD_COUNT" value="14" />
+    <property name="file.separator" value="\" />
+    <property name="java.runtime.version" value="1.8.0_31-b13" />
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jre1.8.0_31\lib\resources.jar;C:\Program Files\Java\jre1.8.0_31\lib\rt.jar;C:\Program Files\Java\jre1.8.0_31\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_31\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_31\lib\jce.jar;C:\Program Files\Java\jre1.8.0_31\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_31\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_31\classes" />
+    <property name="env.ComSpec" value="C:\Windows\system32\cmd.exe" />
+    <property name="CHECKOUT_INPUT_SHIPADD1_XPATH" value="//input[@id=&apos;shippingAddress&apos;]" />
+    <property name="CHECKOUT_USER_HI_EMAIL_stage" value="manilaqa+stagepcmhi96898@gmail.com" />
+    <property name="env.TEMP" value="C:\Users\mpalo\AppData\Local\Temp" />
+    <property name="env.VS110COMNTOOLS" value="C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\" />
+    <property name="screenshot.dir" value="C:\wt\nikeStore/junit/screenshot/" />
+    <property name="CHECKOUT_QTY_APOWEIGHTLIMIT" value="1" />
+    <property name="CHECKOUT_BTN_SACLOSEBTN_XPATH" value="//img[@id=&apos;sa_close&apos;]" />
+    <property name="user.country" value="US" />
+    <property name="env.ANT_HOME" value="C:\eclipse-jee-luna-R-win32-x86_64\eclipse\plugins\org.apache.ant_1.9.2.v201404171502" />
+    <property name="CHECKOUT_INPUT_SHIPADD2_XPATH" value="//input[@id=&apos;shippingAddress_2&apos;]" />
+    <property name="CHECKOUT_INPUT_BILLZIP_XPATH" value="//input[@id=&apos;billingZip&apos;]" />
+    <property name="CHECKOUT_INPUT_SHIPZIP_XPATH" value="//input[@id=&apos;shippingZip&apos;]" />
+    <property name="CHECKOUT_LINK_ADDBOOKEDIT_XPATH" value="//div[@id=&apos;shipInfoCont&apos;]//a[@class=&apos;fBold btnEditAddress&apos;]" />
+    <property name="CART_LABEL_MAILINREBATE_XPATH" value="//p[@class=&apos;itemRebate&apos; and contains(text(),&apos;Mail-in Rebate&apos;)]" />
+    <property name="CHECKOUT_INPUT_BILLCONFIRMEMAIL_XPATH" value="//input[@id=&apos;billingConfirmEmail&apos;]" />
+    <property name="shipmethod.9" value="FedEx Economy (2 days)" />
+    <property name="CHECKOUT_LINK_ORDER_DELETE_ITEM_XPATH" value="//a[contains(@class,&apos;deleteCartItem&apos;)]" />
+    <property name="SEARCH_SKU_RECYCFEE" value="9673211" />
+    <property name="shipmethod.8" value="FedEx Standard Overnight" />
+    <property name="shipmethod.7" value="Overweight Priority" />
+    <property name="CHECKOUT_SCRIPT_OMNI_XPATH" value="//script[contains(text(),&apos;s.events=&quot;scCheckout&quot;&apos;)]" />
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="CHECKOUT_LINK_CREATEACT_XPATH" value="//a[@href=&apos;/o/unifiedWidget-1&apos;]" />
+    <property name="shipmethod.6" value="Overweight Ground" />
+    <property name="shipmethod.5" value="UPS 2nd Day Air (2 days)" />
+    <property name="CART_BTN_SIGNIN_XPATH" value="//div[@class=&apos;cartOrdersCon&apos;]//a[@id=&apos;scLoginSubmit&apos;]" />
+    <property name="shipmethod.4" value="U.S. Priority Mail (2-3 days)" />
+    <property name="shipmethod.3" value="UPS Ground (3-7 days)" />
+    <property name="env.PSModulePath" value="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" />
+    <property name="CART_INPUT_QUICKADD_XPATH" value="//input[@id=&apos;cartSku&apos;]" />
+    <property name="shipmethod.2" value="FedEx Saturday" />
+    <property name="shipmethod.1" value="FedEx Priority Overnight" />
+    <property name="CART_LABEL_LOWSUBTOTAL_XPATH" value="//div[@class=&apos;itemRebate&apos; and contains(text(),&apos;See the final low subtotal on checkout.&apos;)]" />
+    <property name="java.specification.version" value="1.8" />
+    <property name="sun.arch.data.model" value="64" />
+  </properties>
+  <testcase classname="com.pcm.tests.HomepageAlive" name="openHomepage" time="32.28" />
+  <system-out><![CDATA[http://www.pcm.com/ Initialized...
+[VERIFY] id('search-menu-9')//input is found in PCM IT Solutions & Services
+[SCREENSHOT] Storing screenshot at C:\wt\nikeStore/junit/screenshot//HomepageAlive\PCMVerifyHomepage2717012703PASSED.png
+[PCM] Verify Homepage :PASSED
+[SCREENSHOT] Storing screenshot at C:\wt\nikeStore/junit/screenshot//HomepageAlive\Last Page Test Result.png
+]]></system-out>
+  <system-err><![CDATA[log4j:WARN No appenders could be found for logger (org.apache.http.client.protocol.RequestAddCookies).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+]]></system-err>
+</testsuite>

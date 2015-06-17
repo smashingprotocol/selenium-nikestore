@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project default="defaultTest">
+
+	<target name="defaultTest" depends="fullTest">
+	</target>
+	
+	<!-- Maven Dependencies repository classpath  -->
+    <path id="Maven Dependencies.libraryclasspath">
+    	<fileset dir="../${maven.repo.dir}">
+    		<include name="*.jar"></include>
+    	</fileset>
+    </path>
+     
+    <!--pcm libraries path -->
+    <path id="pcm.classpath">
+    	<fileset dir="../lib">
+    		<include name="*.jar"></include>
+    	</fileset>
+    	<pathelement location="../target/classes"/>
+        <pathelement location="../target/test-classes"/>
+    	<path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+	
+	<condition property="isProd">
+		<equals arg1="prod" arg2="${TEST_ENV}" casesensitive="false" trim="true" />
+	</condition>
+	
+	<target name="fullTest">
+		<antcall target="HomepageAlive"/>
+		<antcall target="SearchKeyword"/>
+		<antcall target="shoppingCart"/>
+		<antcall target="verifyOrder"/>		
+	</target>
+
+	<target name="shoppingCart">
+		<antcall target="ShoppingCartAddtoCartfoLowerPriceDisplay"/>
+		<antcall target="ShoppingCartAdditionalInCartSavingsPriceDisplay"/>
+		<antcall target="ShoppingCartWhatisMyFinalPricePriceDisplay"/>
+		<antcall target="ShoppingCartVerifyFreeShippingItem"/>
+	</target>
+	
+	<target name="verifyOrder">
+		<antcall target="VerifyOrderRecyclingFee"/>
+		<antcall target="VerifyOrderChangeAddressTaxESD"/>
+		<antcall target="VerifyOrderOmnitureProperties"/>
+		<antcall target="VerifyOrderSavedCreditCard"/>
+		<antcall target="VerifyOrderMIRPriceVerificationSaveforLaterinCart"/>
+		<antcall target="VerifyOrderChangeAddressTax"/>
+		<antcall target="VerifyOrderItemPrice"/>
+		<antcall target="VerifyOrderCartCalculateShipping"/>
+		<antcall target="VerifyOrderAvailableShippingMethod"/>
+		<antcall target="VerifyOrderAvailableShippingMethodAPO"/>
+		<antcall target="VerifyOrderAvailableShippingMethodHawaii"/>
+		<antcall target="VerifyOrderReviewQtyValidation"/>
+		<antcall target="VerifyOrderReviewQtyWeightLimitValidation"/>
+		<antcall target="CheckoutOrderConfirmationAmountandURL"/>
+		<antcall target="VerifyOrderShippingFeeUpdate"/>
+		<antcall target="VerifyOrderConfirmationScripts"/>
+		<antcall target="VerifyOrderAddtoCartfoLowerPriceSubTotal"/>
+		<antcall target="VerifyOrderAdditionalInCartSavingsSubTotal"/>
+		<antcall target="VerifyOrderWhatisMyFinalPriceSubTotal"/>
+		<antcall target="VerifyOrderQASModalisDisplay"/>
+		<antcall target="VerifyOrderCouponCodePriceSubTotal"/>
+	</target>
+	
+  <!-- execute the JAVA format test case in JAVA -->
+    <target name="HomepageAlive (1)">
+        <java classname="com.pcm.tests.HomepageAlive" failonerror="true" fork="yes">
+        	<classpath refid="pcm.classpath"/>
+   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+        </java>
+    </target>
+	    
+	<!-- execute the JAVA format test cases in JUNIT -->
+    <target name="HomepageAlive">
+    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+            <test name="com.pcm.tests.HomepageAlive" todir="../${junit.output.dir}"/>
+           	<classpath refid="pcm.classpath"/>
+   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+        </junit>
+    </target>
+	
+	<target name="SearchKeyword">
+    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+            <test name="com.pcm.tests.SearchKeyword" todir="../${junit.output.dir}"/>
+           	<classpath refid="pcm.classpath"/>
+   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+        </junit>
+    </target>
+	
+	<!-- Verify Order/Checkout Test Cases -->
+	
+		<target name="VerifyOrderRecyclingFee">
+	    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	        	<sysproperty key="host" value="${TEST_HOST}"/>
+	        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>  
+	        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	            <test name="com.pcm.tests.VerifyOrderRecyclingFee" todir="../${junit.output.dir}"/>
+	           	<classpath refid="pcm.classpath"/>
+	   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+	        </junit>
+	    </target>
+			
+		<target name="VerifyOrderChangeAddressTaxESD">
+	    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	        	<sysproperty key="host" value="${TEST_HOST}"/>
+	        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+	        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	            <test name="com.pcm.tests.VerifyOrderChangeAddressTaxESD" todir="../${junit.output.dir}"/>
+	           	<classpath refid="pcm.classpath"/>
+	   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+	        </junit>
+	    </target>
+	
+		<target name="VerifyOrderOmnitureProperties">
+	    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	        	<sysproperty key="host" value="${TEST_HOST}"/>
+	        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+	        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	            <test name="com.pcm.tests.VerifyOrderOmnitureProperties" todir="../${junit.output.dir}"/>
+	           	<classpath refid="pcm.classpath"/>
+	   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+	        </junit>
+	    </target>
+	
+		<target name="VerifyOrderSavedCreditCard">
+	    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	        	<sysproperty key="host" value="${TEST_HOST}"/>
+	        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+	        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	            <test name="com.pcm.tests.VerifyOrderSavedCreditCard" todir="../${junit.output.dir}"/>
+	           	<classpath refid="pcm.classpath"/>
+	   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+	        </junit>
+	    </target>		
+	
+		<target name="VerifyOrderRebatesPriceSubTotalUpdateQty">
+	    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	        	<sysproperty key="host" value="${TEST_HOST}"/>
+	        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+	        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	            <test name="com.pcm.tests.VerifyOrderRebatesPriceSubTotalUpdateQty" todir="../${junit.output.dir}"/>
+	           	<classpath refid="pcm.classpath"/>
+	   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+	        </junit>
+	    </target>	
+	
+		<target name="VerifyOrderMIRPriceVerificationSaveforLaterinCart">
+	    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	        	<sysproperty key="host" value="${TEST_HOST}"/>
+	        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+	        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	            <test name="com.pcm.tests.VerifyOrderMIRPriceVerificationSaveforLaterinCart" todir="../${junit.output.dir}"/>
+	           	<classpath refid="pcm.classpath"/>
+	   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+	        </junit>
+	    </target>	
+		
+		<target name="VerifyOrderChangeAddressTax">
+	    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	        	<sysproperty key="host" value="${TEST_HOST}"/>
+	        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+	        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	            <test name="com.pcm.tests.VerifyOrderChangeAddressTax" todir="../${junit.output.dir}"/>
+	           	<classpath refid="pcm.classpath"/>
+	   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+	        </junit>
+	    </target>	
+	
+		<target name="VerifyOrderItemPrice">
+	    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	        	<sysproperty key="host" value="${TEST_HOST}"/>
+	        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+	        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	            <test name="com.pcm.tests.VerifyOrderItemPrice" todir="../${junit.output.dir}"/>
+	           	<classpath refid="pcm.classpath"/>
+	   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+	        </junit>
+	    </target>	
+	
+		<target name="VerifyOrderCartCalculateShipping">
+	    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	        	<sysproperty key="host" value="${TEST_HOST}"/>
+	        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+	        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	            <test name="com.pcm.tests.VerifyOrderCartCalculateShipping" todir="../${junit.output.dir}"/>
+	           	<classpath refid="pcm.classpath"/>
+	   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+	        </junit>
+	    </target>	
+	
+		<target name="VerifyOrderAvailableShippingMethod">
+	    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	        	<sysproperty key="host" value="${TEST_HOST}"/>
+	        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+	        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        	<sysproperty key="tableContainer" value="${basedir}/verifyOrderAvailableShippingMethod.xls"/>
+	            <test name="com.pcm.tests.VerifyOrderAvailableShippingMethod" todir="../${junit.output.dir}"/>
+	           	<classpath refid="pcm.classpath"/>
+	   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+	        </junit>
+	    </target>
+	
+		<target name="VerifyOrderAvailableShippingMethodAPO">
+			<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	        	<sysproperty key="host" value="${TEST_HOST}"/>
+	        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+	        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        	<sysproperty key="tableContainer" value="${basedir}/VerifyOrderAvailableShippingMethodAPO.xls"/>
+	            <test name="com.pcm.tests.VerifyOrderAvailableShippingMethodAPO" todir="../${junit.output.dir}"/>
+	           	<classpath refid="pcm.classpath"/>
+	   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+	        </junit>
+	    </target>
+	
+		<target name="VerifyOrderAvailableShippingMethodHawaii">
+	    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	        	<sysproperty key="host" value="${TEST_HOST}"/>
+	        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+	        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        	<sysproperty key="tableContainer" value="${basedir}/VerifyOrderAvailableShippingMethodHawaii.xls"/>
+	            <test name="com.pcm.tests.VerifyOrderAvailableShippingMethodHawaii" todir="../${junit.output.dir}"/>
+	           	<classpath refid="pcm.classpath"/>
+	   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+	        </junit>
+	    </target>
+	
+		<target name="VerifyOrderReviewQtyValidation">
+	    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	        	<sysproperty key="host" value="${TEST_HOST}"/>
+	        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+	        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	            <test name="com.pcm.tests.VerifyOrderReviewQtyValidation" todir="../${junit.output.dir}"/>
+	           	<classpath refid="pcm.classpath"/>
+	   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+	        </junit>
+	    </target>
+		
+		<target name="VerifyOrderReviewQtyWeightLimitValidation">
+	    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	        	<sysproperty key="host" value="${TEST_HOST}"/>
+	        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+	        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	            <test name="com.pcm.tests.VerifyOrderReviewQtyWeightLimitValidation" todir="../${junit.output.dir}"/>
+	           	<classpath refid="pcm.classpath"/>
+	   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+	        </junit>
+	    </target>
+	
+		<target name="VerifyOrderCheckoutCreditCard" unless="isProd">
+	    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	        	<sysproperty key="host" value="${TEST_HOST}"/>
+	        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+	        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	            <test name="com.pcm.tests.VerifyOrderCheckoutCreditCard" todir="../${junit.output.dir}"/>
+	           	<classpath refid="pcm.classpath"/>
+	   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+	        </junit>
+	    </target>
+	
+		<target name="CheckoutOrderConfirmationAmountandURL" unless="isProd">
+	    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	        	<sysproperty key="host" value="${TEST_HOST}"/>
+	        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+	        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	            <test name="com.pcm.tests.CheckoutOrderConfirmationAmountandURL" todir="../${junit.output.dir}"/>
+	           	<classpath refid="pcm.classpath"/>
+	   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+	        </junit>
+	    </target>
+	
+		<target name="VerifyOrderShippingFeeUpdate">
+	    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	        	<sysproperty key="host" value="${TEST_HOST}"/>
+	        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+	        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	            <test name="com.pcm.tests.VerifyOrderShippingFeeUpdate" todir="../${junit.output.dir}"/>
+	           	<classpath refid="pcm.classpath"/>
+	   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+	        </junit>
+	    </target>
+	
+		<target name="VerifyOrderConfirmationScripts" unless="isProd">
+	    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	        	<sysproperty key="host" value="${TEST_HOST}"/>
+	        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+	        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	            <test name="com.pcm.tests.VerifyOrderConfirmationScripts" todir="../${junit.output.dir}"/>
+	           	<classpath refid="pcm.classpath"/>
+	   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+	        </junit>
+	    </target>
+	
+		<target name="VerifyOrderAddtoCartfoLowerPriceSubTotal">
+	    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	        	<sysproperty key="host" value="${TEST_HOST}"/>
+	        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+	        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        	<sysproperty key="tableContainer" value="${basedir}/VerifyOrderAddtoCartfoLowerPriceSubTotal.xls"/>
+	            <test name="com.pcm.tests.VerifyOrderAddtoCartfoLowerPriceSubTotal" todir="../${junit.output.dir}"/>
+	           	<classpath refid="pcm.classpath"/>
+	   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+	        </junit>
+	    </target>
+	
+		<target name="VerifyOrderAdditionalInCartSavingsSubTotal">
+	    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	        	<sysproperty key="host" value="${TEST_HOST}"/>
+	        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+	        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        	<sysproperty key="tableContainer" value="${basedir}/VerifyOrderAdditionalInCartSavingsSubTotal.xls"/>
+	            <test name="com.pcm.tests.VerifyOrderAdditionalInCartSavingsSubTotal" todir="../${junit.output.dir}"/>
+	           	<classpath refid="pcm.classpath"/>
+	   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+	        </junit>
+	    </target>
+	
+		<target name="VerifyOrderWhatisMyFinalPriceSubTotal">
+	    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	        	<sysproperty key="host" value="${TEST_HOST}"/>
+	        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+	        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        	<sysproperty key="tableContainer" value="${basedir}/VerifyOrderWhatisMyFinalPriceSubTotal.xls"/>
+	            <test name="com.pcm.tests.VerifyOrderWhatisMyFinalPriceSubTotal" todir="../${junit.output.dir}"/>
+	           	<classpath refid="pcm.classpath"/>
+	   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+	        </junit>
+	    </target>
+	
+		<target name="VerifyOrderQASModalisDisplay">
+	    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	        	<sysproperty key="host" value="${TEST_HOST}"/>
+	        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+	        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        	<sysproperty key="tableContainer" value="${basedir}/VerifyOrderQASModalisDisplay.xls"/>
+	            <test name="com.pcm.tests.VerifyOrderQASModalisDisplay" todir="../${junit.output.dir}"/>
+	           	<classpath refid="pcm.classpath"/>
+	   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+	        </junit>
+	    </target>
+
+		<target name="VerifyOrderCouponCodePriceSubTotal">
+	    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	        	<sysproperty key="host" value="${TEST_HOST}"/>
+	        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+	        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+	            <test name="com.pcm.tests.VerifyOrderCouponCodePriceSubTotal" todir="../${junit.output.dir}"/>
+	           	<classpath refid="pcm.classpath"/>
+	   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+	        </junit>
+	    </target>
+	
+	<!-- Shoping Cart -->
+	<target name="ShoppingCartAddtoCartfoLowerPriceDisplay">
+    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+        	<sysproperty key="host" value="${TEST_HOST}"/>
+        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+        	<sysproperty key="tableContainer" value="${basedir}/VerifyOrderAddtoCartfoLowerPriceSubTotal.xls"/>
+            <test name="com.pcm.tests.ShoppingCartAddtoCartfoLowerPriceDisplay" todir="../${junit.output.dir}"/>
+           	<classpath refid="pcm.classpath"/>
+   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+        </junit>
+    </target>
+	
+	<target name="ShoppingCartAdditionalInCartSavingsPriceDisplay">
+    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+        	<sysproperty key="host" value="${TEST_HOST}"/>
+        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+        	<sysproperty key="tableContainer" value="${basedir}/VerifyOrderAdditionalInCartSavingsSubTotal.xls"/>
+            <test name="com.pcm.tests.ShoppingCartAdditionalInCartSavingsPriceDisplay" todir="../${junit.output.dir}"/>
+           	<classpath refid="pcm.classpath"/>
+   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+        </junit>
+    </target>
+	
+	<target name="ShoppingCartWhatisMyFinalPricePriceDisplay">
+    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+        	<sysproperty key="host" value="${TEST_HOST}"/>
+        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+        	<sysproperty key="tableContainer" value="${basedir}/VerifyOrderWhatisMyFinalPriceSubTotal.xls"/>
+            <test name="com.pcm.tests.ShoppingCartWhatisMyFinalPricePriceDisplay" todir="../${junit.output.dir}"/>
+           	<classpath refid="pcm.classpath"/>
+   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+        </junit>
+    </target>
+	
+	<target name="ShoppingCartVerifyFreeShippingItem">
+    	<mkdir dir="${screenshot.dir}/${ant.project.invoked-targets}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+        	<sysproperty key="host" value="${TEST_HOST}"/>
+        	<sysproperty key="pcmHost" value="${TEST_ENV}"/>
+        	<sysproperty key="screenShotDir" value="${screenshot.dir}/${ant.project.invoked-targets}"/>
+        	<sysproperty key="tableContainer" value="${basedir}/ShoppingCartVerifyFreeShippingItem.xls"/>
+            <test name="com.pcm.tests.ShoppingCartVerifyFreeShippingItem" todir="../${junit.output.dir}"/>
+           	<classpath refid="pcm.classpath"/>
+   		 	<classpath refid="Maven Dependencies.libraryclasspath"/>
+        </junit>
+    </target>
+	
+</project>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<project basedir="." default="default" name="pcm">
+
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../eclipse-jee-luna-R-win32-x86_64/eclipse/"/>
+    <property name="junit.output.dir" value="junit"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.5"/>
+    <property name="source" value="1.5"/>
+	<!--<property name="maven.repo.dir" value="../../Users/mpalo/.m2/repository"/> -->
+	<property name="maven.repo.dir" value="../../${env.HOMEPATH}/.m2/repository"/>
+	<property file="pcm.properties"/>
+	<property name="screenshot.dir" value="${user.dir}/${junit.output.dir}/screenshot/"/>
+	<property name="tests.dir" value="${env.HOMEPATH}/tests"/>
+	
+	
+    <target name="default" depends="dotest,junitreport" />
+    
+    
+    
+    <!-- Create the target directory and put all classes -->
+    <target name="init">
+        <mkdir dir="target/classes"/>
+        <mkdir dir="target/test-classes"/>
+        <copy includeemptydirs="false" todir="target/classes">
+            <fileset dir="src/main/java">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="target/test-classes">
+            <fileset dir="src/test/java">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    
+    <!-- Maven Dependencies repository classpath  -->
+    <path id="Maven Dependencies.libraryclasspath">
+    	<fileset dir="${maven.repo.dir}">
+    		<include name="*.jar"></include>
+    	</fileset>
+    </path>
+    
+    <!--pcm libraries path -->
+    <path id="pcm.classpath">
+    	<fileset dir="lib">
+    		<include name="*.jar"></include>
+    	</fileset>
+    	<pathelement location="target/classes"/>
+        <pathelement location="target/test-classes"/>
+    	<path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    
+    
+    <target name="clean">
+        <delete dir="target/classes"/>
+        <delete dir="target/test-classes"/>
+        <delete dir="${junit.output.dir}"/>
+    </target>
+    
+    <target name="cleanall" depends="clean" />
+    <target name="build" depends="build-project" />
+    
+    <target name="dotest" depends="clean,build">
+    	<!-- <antcall target="HomepageAlive"/> -->
+		<ant dir="tests" antfile="allTests.xml" inheritRefs="true"/>
+    </target>
+    
+    
+
+	
+    <target depends="init" name="build-project">
+    	<mkdir dir="../${junit.output.dir}"/>
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="target/classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src/main/java"/>
+            <classpath refid="pcm.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="target/test-classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src/test/java"/>
+            <classpath refid="pcm.classpath"/>
+        </javac>
+    </target>
+    
+  	<!-- Create directories for the JUNIT logs -->  
+    <target name="junitreport">
+        <junitreport todir="${junit.output.dir}">
+            <fileset dir="${junit.output.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${junit.output.dir}"/>
+        </junitreport>
+    </target>
+</project>
